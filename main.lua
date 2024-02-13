@@ -11,8 +11,8 @@ function love.load()
     player = {}
     player.collider = world:newBSGRectangleCollider(1240,340,40,60,8)
     player.collider:setFixedRotation(true)
-    player.x = 252
-    player.y = 114
+    player.x = 92
+    player.y = 94
     player.speed = 240
     player.sprite = love.graphics.newImage('sprites/player.png')
     player.spriteSheet = love.graphics.newImage('sprites/player-sheet.png')
@@ -117,6 +117,7 @@ function love.update(dt)
 
 end
 function love.draw()
+    love.graphics.scale(1,1)  
     cam:attach()
         gameMap:drawLayer(gameMap.layers["Ground"])
         gameMap:drawLayer(gameMap.layers["Trees"])
@@ -126,5 +127,3 @@ function love.draw()
     cam:detach()
 end
 
---    love.graphics.scale( 2.5, 2.5 )  
---    love.graphics.draw(bg, 0, 0)  
