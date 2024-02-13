@@ -38,7 +38,7 @@ function love.load()
     sounds.blip = love.audio.newSource("sounds/blip.wav","static")
     sounds.music = love.audio.newSource("sounds/music.mp3","stream")
     sounds.music:setLooping(true)
-    sounds.music:play()
+--    sounds.music:play()
 
 end
 
@@ -115,7 +115,6 @@ function love.update(dt)
 	cam.y = (mapH-w/2)
     end
 
-
 end
 function love.draw()
     cam:attach()
@@ -126,8 +125,6 @@ function love.draw()
 	-- world:draw()
     cam:detach()
 end
-
-
 
 --    love.graphics.scale( 2.5, 2.5 )  
 --    love.graphics.draw(bg, 0, 0)  
